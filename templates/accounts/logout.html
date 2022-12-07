@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+    <h4>Rostdan ham chiqib ketmoqchimisz</h4>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Log out</button>
+        <a href="{% url 'articles:article_list' %}">Orqaga</a>
+    </form>
+
+{% endblock %}
